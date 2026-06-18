@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Compiled Typescript output
+dist/
+
+# Environment files - contains sensitive credentials
+.env
+
+# Allure report output
+allure-results/
+allure-report/
+
+# OS files
+.DS_Store
+
+# VS Code settings
+.vscode/
