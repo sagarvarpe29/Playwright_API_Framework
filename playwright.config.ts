@@ -27,9 +27,14 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['allure-playwright', {
-      detail: true,               // include request/response details in report
-      outputFolder: 'allure-results', // raw results go here
-      suiteTitle: true            // group tests by suite name in report
+      detail: true,
+      outputFolder: 'allure-results',
+      suiteTitle: true,
+      environmentInfo: {
+        'Suite': process.env.ALLURE_SUITE_NAME || 'Playwright API Framework',
+        'Environment': process.env.NODE_ENV || 'dev',
+        'Base URL': process.env.BASE_URL || 'https://reqres.in',
+      }
     }]
   ],
 
